@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="X-WAM: Unified 4D World Action Modeling from Video Priors with Asynchronous Denoising">
+  <meta name="keywords" content="world action model, 4D reconstruction, robot manipulation, video generation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>X-WAM</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">X-WAM: Unified 4D World Action Modeling from Video Priors with Asynchronous Denoising</h1>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Jun Guo<sup>1,2</sup>,</span>
+              <span class="author-block">Qiwei Li<sup>2,3</sup>,</span>
+              <span class="author-block">Peiyan Li<sup>2,4</sup>,</span>
+              <span class="author-block">Zilong Chen<sup>1</sup>,</span>
+              <span class="author-block">Nan Sun<sup>1,2</sup>,</span>
+              <br>
+              <span class="author-block">Yifei Su<sup>2</sup>,</span>
+              <span class="author-block">Heyun Wang<sup>2</sup>,</span>
+              <span class="author-block">Yuan Zhang<sup>2</sup>,</span>
+              <span class="author-block">Xinghang Li<sup>2&dagger;</sup>,</span>
+              <span class="author-block">Huaping Liu<sup>1&dagger;</sup></span>
+            </div>
+
+            <div class="is-size-6 publication-authors">
+              <span class="author-block"><sup>1</sup>Tsinghua University,</span>
+              <span class="author-block"><sup>2</sup>Xiaomi Robotics,</span>
+              <span class="author-block"><sup>3</sup>Peking University,</span>
+              <span class="author-block"><sup>4</sup>CASIA</span>
+            </div>
+
+            <div class="is-size-4 publication-authors">
+              <!-- Conference Name -->
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a target="_blank" href="#"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- arXiv Link. -->
+                <span class="link-block">
+                  <a target="_blank" href="#"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a target="_blank" href="#"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (Coming Soon)</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+
+            <!-- Main Video -->
+            <div class="section has-text-centered">
+              <video autoplay controls loop muted playsinline width="100%">
+                <source src="./static/videos/output_720p.mp4" type="video/mp4">
+              </video>
+            </div>
+
+            <!-- Teaser Figure -->
+            <div class="section has-text-centered">
+              <img src="./static/images/teaser.png" width="100%" alt="X-WAM teaser figure" />
+            </div>
+
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Abstract -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              We propose <b>X-WAM</b>, a unified 4D World Action Model that simultaneously targets high-fidelity video generation, 3D spatial reconstruction, and real-time policy execution. To leverage the strong visual priors of pretrained video diffusion models, X-WAM imagines the future world by predicting multi-view RGB-D videos, and obtains spatial information efficiently through a lightweight structural adaptation: replicating the final few blocks of the pretrained Diffusion Transformer into a dedicated depth prediction branch for the reconstruction of future spatial information. Moreover, we propose <b>Asynchronous Noise Sampling (ANS)</b> to jointly optimize generation quality and action decoding efficiency. ANS applies a specialized asynchronous denoising schedule during inference, which rapidly decodes actions with fewer steps to enable efficient real-time execution, while dedicating the full sequence of steps to generate high-fidelity video. Rather than entirely decoupling the timesteps during training, ANS samples from their joint distribution to align with the inference distribution. Pretrained on over 5,800 hours of robotic data, X-WAM achieves <b>79.2%</b> and <b>90.7%</b> average success rate on RoboCasa and RoboTwin 2.0 benchmarks, while producing high-fidelity 4D reconstruction and generation surpassing existing methods in both visual and geometric metrics.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Framework -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="rows">
+        <div class="row is-full-width">
+          <h2 class="title is-3">Method</h2>
+          <div class="content has-text-centered">
+            <img src="./static/images/framework.png" class="interpolation-image" width="100%" alt="X-WAM framework" />
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              X-WAM is built upon a pretrained video diffusion model (Wan2.2-5B) and fine-tuned to jointly denoise multi-view RGB videos, proprioceptive states, and robot actions within a single unified sequence. Two core designs enable simultaneous 4D reconstruction and efficient policy execution:
+            </p>
+            <p>
+              <b>Lightweight Depth Adaptation.</b> Instead of doubling the sequence length by treating depth as additional tokens, we replicate the final few DiT blocks into a dedicated depth branch that runs in an interleaved fashion with the main RGB branch. The depth branch reads from the main branch via cross-attention but does not affect it (unilateral attention), preserving pretrained visual priors while enabling high-quality spatial reconstruction. During policy inference, this branch can be toggled off to eliminate extra latency.
+            </p>
+            <p>
+              <b>Asynchronous Noise Sampling (ANS).</b> Videos and actions require vastly different numbers of denoising steps. ANS introduces an asynchronous schedule: actions are decoded in only a few initial steps and immediately dispatched for execution, while video denoising continues for the full sequence to produce high-fidelity outputs. To align training with this inference behavior, we sample video and action noise levels from a coupled joint distribution rather than independently, ensuring the model is trained on configurations it actually encounters at test time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Simulation: 4D Reconstruction -->
+  <section class="section" id="4d-reconstruction">
+    <div class="container is-max-desktop">
+      <div class="rows">
+        <h2 class="title is-3">4D Reconstruction (Simulation)</h2>
+        <p class="content has-text-justified">
+          X-WAM jointly generates multi-view RGB-D videos and reconstructs 3D point clouds at each timestep, enabling high-fidelity 4D reconstruction. Below we show qualitative results of the predicted RGB, depth, and reconstructed point clouds in the RoboCasa simulation environment.
+        </p>
+
+        <div class="zoom_container has-text-centered">
+          <div style="display: inline-block; width: 45%; vertical-align: top;">
+            <video controls muted playsinline width="100%">
+              <source src="./static/videos/TurnOnMicrowave.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered"><i>Turn On Microwave</i></p>
+          </div>
+          <div style="display: inline-block; width: 45%; vertical-align: top;">
+            <video controls muted playsinline width="100%">
+              <source src="./static/videos/PnPCounterToCab.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered"><i>Pick & Place: Counter to Cabinet</i></p>
+          </div>
+          <div style="display: inline-block; width: 45%; vertical-align: top;">
+            <video controls muted playsinline width="100%">
+              <source src="./static/videos/PnPSinkToCounter.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered"><i>Pick & Place: Sink to Counter</i></p>
+          </div>
+          <div style="display: inline-block; width: 45%; vertical-align: top;">
+            <video controls muted playsinline width="100%">
+              <source src="./static/videos/OpenDrawer.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered"><i>Open Drawer</i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Real Robot -->
+  <section class="section" id="real-robot">
+    <div class="container is-max-desktop">
+      <div class="rows">
+        <h2 class="title is-3">Real Robot Experiments</h2>
+        <p class="content has-text-justified">
+          We deploy X-WAM on physical robots to validate real-world performance. The following videos show the model executing various manipulation tasks on real hardware, demonstrating its generalization from simulation to the real world.
+        </p>
+
+        <h3 class="title is-4">Scalability: Pack 1 Earphone</h3>
+        <div class="zoom_container has-text-centered">
+          <div style="display: inline-block; width: 30%; vertical-align: top;">
+            <video controls muted playsinline width="100%">
+              <source src="./static/videos/1ear_white.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered"><i>White Earphone</i></p>
+          </div>
+          <div style="display: inline-block; width: 30%; vertical-align: top;">
+            <video controls muted playsinline width="100%">
+              <source src="./static/videos/1ear_cyan.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered"><i>Cyan Earphone</i></p>
+          </div>
+          <div style="display: inline-block; width: 30%; vertical-align: top;">
+            <video controls muted playsinline width="100%">
+              <source src="./static/videos/1ear_black.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered"><i>Black Earphone</i></p>
+          </div>
+        </div>
+        <h3 class="title is-4" style="margin-top: 2rem;">Scalability: Pack 3 Earphones</h3>
+        <div class="zoom_container has-text-centered">
+          <div style="display: inline-block; width: 30%; vertical-align: top;">
+            <video controls muted playsinline width="100%">
+              <source src="./static/videos/3ear_1.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered"><i>Trial 1</i></p>
+          </div>
+          <div style="display: inline-block; width: 30%; vertical-align: top;">
+            <video controls muted playsinline width="100%">
+              <source src="./static/videos/3ear_2.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered"><i>Trial 2</i></p>
+          </div>
+          <div style="display: inline-block; width: 30%; vertical-align: top;">
+            <video controls muted playsinline width="100%">
+              <source src="./static/videos/3ear_3.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered"><i>Trial 3</i></p>
+          </div>
+        </div>
+        <h3 class="title is-4" style="margin-top: 2rem;">Generalization</h3>
+        <div class="zoom_container has-text-centered">
+          <div style="display: inline-block; width: 30%; vertical-align: top;">
+            <video controls muted playsinline width="100%">
+              <source src="./static/videos/ood_place.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered"><i>Novel Placements</i></p>
+          </div>
+          <div style="display: inline-block; width: 30%; vertical-align: top;">
+            <video controls muted playsinline width="100%">
+              <source src="./static/videos/tablechange.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered"><i>Unseen Tablecloth</i></p>
+          </div>
+          <div style="display: inline-block; width: 30%; vertical-align: top;">
+            <video controls muted playsinline width="100%">
+              <source src="./static/videos/distractors.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered"><i>Unseen Distractors</i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Citation -->
+  <section class="section" id="citation">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Citation</h2>
+      <pre><code>@article
+}</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
