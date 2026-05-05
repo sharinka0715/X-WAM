@@ -173,3 +173,161 @@ body {
 .zoom_container:hover #content_zoom_in {
     display: inline;
 }
+
+/* === Enhanced Academic Styling === */
+
+/* Refined section spacing and alternating backgrounds */
+.section {
+  padding: 3rem 1.5rem;
+}
+
+.section:nth-child(even) {
+  background-color: #fafbfc;
+}
+
+/* Section title with subtle underline accent */
+.title.is-3 {
+  position: relative;
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.title.is-3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #4a90d9, #7b68ee);
+  border-radius: 2px;
+}
+
+.rows .title.is-3::after,
+.content .title.is-3::after {
+  left: 0;
+  transform: none;
+}
+
+/* Section divider between major sections */
+section.section + section.section::before {
+  content: '';
+  display: block;
+  width: 80%;
+  max-width: 600px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #ddd 20%, #ddd 80%, transparent);
+  margin: 0 auto 2rem auto;
+}
+
+/* Video card styling */
+.zoom_container > div[style*="inline-block"] {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 10px;
+  margin: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.zoom_container > div[style*="inline-block"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.zoom_container video {
+  border-radius: 8px;
+}
+
+.zoom_container p.has-text-centered {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Subsection titles (h3) */
+.title.is-4 {
+  color: #363636;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  border-left: 3px solid #4a90d9;
+  padding-left: 0.75rem;
+}
+
+
+/* Main video card */
+.hero .section.has-text-centered video {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Teaser image */
+.hero .section.has-text-centered img {
+  border-radius: 8px;
+}
+
+/* Framework and teaser images as cards */
+.interpolation-image,
+.hero .section.has-text-centered img {
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  padding: 10px;
+  border: 1px solid #eee;
+}
+
+/* Video cards with top-left title */
+.video-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.video-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.video-card-title {
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 0.5rem;
+  padding-left: 2px;
+}
+
+.video-card video {
+  border-radius: 8px;
+  display: block;
+}
+
+/* Citation block */
+#citation pre {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.25rem;
+  font-size: 0.85rem;
+}
+
+/* Footer refinement */
+.footer {
+  background-color: #f8f9fa;
+  padding: 2rem 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}

@@ -163,30 +163,30 @@
           X-WAM jointly generates multi-view RGB-D videos and reconstructs 3D point clouds at each timestep, enabling high-fidelity 4D reconstruction. Below we show qualitative results of the predicted RGB, depth, and reconstructed point clouds in the RoboCasa simulation environment.
         </p>
 
-        <div class="zoom_container has-text-centered">
-          <div style="display: inline-block; width: 45%; vertical-align: top;">
-            <video controls muted playsinline width="100%">
-              <source src="./static/videos/TurnOnMicrowave.mp4" type="video/mp4">
+        <div class="video-cards">
+          <div class="video-card">
+            <p class="video-card-title">Turn On Microwave</p>
+            <video autoplay controls loop muted playsinline width="100%">
+              <source src="./static/videos/TurnOnMicrowave_wide.mp4" type="video/mp4">
             </video>
-            <p class="has-text-centered"><i>Turn On Microwave</i></p>
           </div>
-          <div style="display: inline-block; width: 45%; vertical-align: top;">
-            <video controls muted playsinline width="100%">
-              <source src="./static/videos/PnPCounterToCab.mp4" type="video/mp4">
+          <div class="video-card">
+            <p class="video-card-title">Pick & Place: Counter to Cabinet</p>
+            <video autoplay controls loop muted playsinline width="100%">
+              <source src="./static/videos/PnPCounterToCab_wide.mp4" type="video/mp4">
             </video>
-            <p class="has-text-centered"><i>Pick & Place: Counter to Cabinet</i></p>
           </div>
-          <div style="display: inline-block; width: 45%; vertical-align: top;">
-            <video controls muted playsinline width="100%">
-              <source src="./static/videos/PnPSinkToCounter.mp4" type="video/mp4">
+          <div class="video-card">
+            <p class="video-card-title">Pick & Place: Sink to Counter</p>
+            <video autoplay controls loop muted playsinline width="100%">
+              <source src="./static/videos/PnPSinkToCounter_wide.mp4" type="video/mp4">
             </video>
-            <p class="has-text-centered"><i>Pick & Place: Sink to Counter</i></p>
           </div>
-          <div style="display: inline-block; width: 45%; vertical-align: top;">
-            <video controls muted playsinline width="100%">
-              <source src="./static/videos/OpenDrawer.mp4" type="video/mp4">
+          <div class="video-card">
+            <p class="video-card-title">Open Drawer</p>
+            <video autoplay controls loop muted playsinline width="100%">
+              <source src="./static/videos/OpenDrawer_wide.mp4" type="video/mp4">
             </video>
-            <p class="has-text-centered"><i>Open Drawer</i></p>
           </div>
         </div>
       </div>
@@ -206,22 +206,40 @@
           All real robot videos are played at 1x speed without any editing or cuts.
         </p>
 
-        <h3 class="title is-4">Scalability: Pack 1 Earphone</h3>
+        <p class="content has-text-justified">
+          By incorporating DCT loss during training, the model produces smoother output actions on the 3-earphone packing task.
+        </p>
+        <div class="zoom_container has-text-centered">
+          <div style="display: inline-block; width: 45%; vertical-align: top;">
+            <video autoplay controls loop muted playsinline width="100%">
+              <source src="./static/videos/3ear_dct1.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered"><i>Trial 1</i></p>
+          </div>
+          <div style="display: inline-block; width: 45%; vertical-align: top;">
+            <video autoplay controls loop muted playsinline width="100%">
+              <source src="./static/videos/3ear_dct2.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered"><i>Trial 2</i></p>
+          </div>
+        </div>
+
+        <h3 class="title is-4" style="margin-top: 2rem;">Scalability: Pack 1 Earphone</h3>
         <div class="zoom_container has-text-centered">
           <div style="display: inline-block; width: 30%; vertical-align: top;">
-            <video controls muted playsinline width="100%">
+            <video autoplay controls loop muted playsinline width="100%">
               <source src="./static/videos/1ear_white.mp4" type="video/mp4">
             </video>
             <p class="has-text-centered"><i>White Earphone</i></p>
           </div>
           <div style="display: inline-block; width: 30%; vertical-align: top;">
-            <video controls muted playsinline width="100%">
+            <video autoplay controls loop muted playsinline width="100%">
               <source src="./static/videos/1ear_cyan.mp4" type="video/mp4">
             </video>
             <p class="has-text-centered"><i>Cyan Earphone</i></p>
           </div>
           <div style="display: inline-block; width: 30%; vertical-align: top;">
-            <video controls muted playsinline width="100%">
+            <video autoplay controls loop muted playsinline width="100%">
               <source src="./static/videos/1ear_black.mp4" type="video/mp4">
             </video>
             <p class="has-text-centered"><i>Black Earphone</i></p>
@@ -230,19 +248,19 @@
         <h3 class="title is-4" style="margin-top: 2rem;">Scalability: Pack 3 Earphones</h3>
         <div class="zoom_container has-text-centered">
           <div style="display: inline-block; width: 30%; vertical-align: top;">
-            <video controls muted playsinline width="100%">
+            <video autoplay controls loop muted playsinline width="100%">
               <source src="./static/videos/3ear_1.mp4" type="video/mp4">
             </video>
             <p class="has-text-centered"><i>Trial 1</i></p>
           </div>
           <div style="display: inline-block; width: 30%; vertical-align: top;">
-            <video controls muted playsinline width="100%">
+            <video autoplay controls loop muted playsinline width="100%">
               <source src="./static/videos/3ear_2.mp4" type="video/mp4">
             </video>
             <p class="has-text-centered"><i>Trial 2</i></p>
           </div>
           <div style="display: inline-block; width: 30%; vertical-align: top;">
-            <video controls muted playsinline width="100%">
+            <video autoplay controls loop muted playsinline width="100%">
               <source src="./static/videos/3ear_3.mp4" type="video/mp4">
             </video>
             <p class="has-text-centered"><i>Trial 3</i></p>
@@ -251,19 +269,19 @@
         <h3 class="title is-4" style="margin-top: 2rem;">Generalization</h3>
         <div class="zoom_container has-text-centered">
           <div style="display: inline-block; width: 30%; vertical-align: top;">
-            <video controls muted playsinline width="100%">
+            <video autoplay controls loop muted playsinline width="100%">
               <source src="./static/videos/ood_place.mp4" type="video/mp4">
             </video>
             <p class="has-text-centered"><i>Novel Placements</i></p>
           </div>
           <div style="display: inline-block; width: 30%; vertical-align: top;">
-            <video controls muted playsinline width="100%">
+            <video autoplay controls loop muted playsinline width="100%">
               <source src="./static/videos/tablechange.mp4" type="video/mp4">
             </video>
             <p class="has-text-centered"><i>Unseen Tablecloth</i></p>
           </div>
           <div style="display: inline-block; width: 30%; vertical-align: top;">
-            <video controls muted playsinline width="100%">
+            <video autoplay controls loop muted playsinline width="100%">
               <source src="./static/videos/distractors.mp4" type="video/mp4">
             </video>
             <p class="has-text-centered"><i>Unseen Distractors</i></p>
