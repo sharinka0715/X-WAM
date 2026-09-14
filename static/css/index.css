@@ -256,6 +256,167 @@ section.section + section.section::before {
 }
 
 
+/* Lead-in subsection heading, set off from the block above it */
+.title.is-4.section-lead {
+  margin-top: 3rem;
+}
+
+/* === Additional tasks: card per task, grid of conditions === */
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin-top: 1.5rem;
+}
+
+.task-block {
+  background: #fff;
+  border: 1px solid #ebedf0;
+  border-radius: 14px;
+  padding: 1.5rem 1.6rem 1.6rem;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 4px 14px rgba(16, 24, 40, 0.05);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.task-block:hover {
+  border-color: #dde1e6;
+  box-shadow: 0 2px 4px rgba(16, 24, 40, 0.05), 0 12px 32px rgba(16, 24, 40, 0.09);
+}
+
+/* Header: numeral badge + name + category tag */
+.task-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.6rem;
+}
+
+.task-index {
+  flex: 0 0 auto;
+  width: 2.1rem;
+  height: 2.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #4a90d9, #7b68ee);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.task-heading {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.task-name {
+  font-size: 1.2rem;
+  font-weight: 650;
+  color: #1f2733;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+.task-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #5b6b7f;
+  background: #f1f4f8;
+  border: 1px solid #e3e8ef;
+  border-radius: 999px;
+  padding: 0.18rem 0.6rem;
+  white-space: nowrap;
+}
+
+.task-desc {
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: #5c6672;
+  max-width: 52rem;
+  margin: 0 0 1.25rem;
+  padding-left: calc(2.1rem + 0.85rem);
+}
+
+/* Three conditions side by side */
+.condition-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+}
+
+.condition-card {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.condition-media {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #0f1319;
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.condition-card:hover .condition-media {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(16, 24, 40, 0.14);
+}
+
+.condition-media video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Condition pill: neutral for in-domain, accented for OOD */
+.condition-label {
+  align-self: center;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  white-space: nowrap;
+}
+
+.condition-label.is-indomain {
+  color: #46525f;
+  background: #f2f4f7;
+  border: 1px solid #e5e9ef;
+}
+
+.condition-label.is-ood {
+  color: #3d63a8;
+  background: #eef4fd;
+  border: 1px solid #d9e6f9;
+}
+
+@media screen and (max-width: 768px) {
+  .task-block {
+    padding: 1.15rem 1.1rem 1.25rem;
+  }
+  .task-desc {
+    padding-left: 0;
+  }
+  .condition-grid {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+}
+
 /* Main video card */
 .hero .section.has-text-centered video {
   border-radius: 12px;

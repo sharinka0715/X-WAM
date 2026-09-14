@@ -287,6 +287,135 @@
             <p class="has-text-centered"><i>Unseen Distractors</i></p>
           </div>
         </div>
+
+        <h3 class="title is-4 section-lead">Additional Tasks</h3>
+        <p class="content has-text-justified">
+          Beyond earphone packing, we evaluate X-WAM on three additional bimanual tasks chosen to exercise
+          different requirements. Each task is shown under all three evaluation conditions.
+        </p>
+
+        <div class="task-list">
+
+          <div class="task-block">
+            <div class="task-header">
+              <span class="task-index">01</span>
+              <div class="task-heading">
+                <h4 class="task-name">Phone Packing</h4>
+                <span class="task-tag">Long-horizon sequential</span>
+              </div>
+            </div>
+            <p class="task-desc">
+              The robot must first place the phone into the box, then add the phone accessories, and finally
+              close the lid, so each stage depends on the previous one being completed correctly.
+            </p>
+            <div class="condition-grid">
+              <figure class="condition-card">
+                <div class="condition-media">
+                  <video autoplay controls loop muted playsinline>
+                    <source src="./static/videos/pack_phone_indomain.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <figcaption class="condition-label is-indomain">In-domain</figcaption>
+              </figure>
+              <figure class="condition-card">
+                <div class="condition-media">
+                  <video autoplay controls loop muted playsinline>
+                    <source src="./static/videos/pack_phone_tablecloth.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <figcaption class="condition-label is-ood">Unseen Tablecloth</figcaption>
+              </figure>
+              <figure class="condition-card">
+                <div class="condition-media">
+                  <video autoplay controls loop muted playsinline>
+                    <source src="./static/videos/pack_phone_lighting.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <figcaption class="condition-label is-ood">Unseen Lighting</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="task-block">
+            <div class="task-header">
+              <span class="task-index">02</span>
+              <div class="task-heading">
+                <h4 class="task-name">Box Packing</h4>
+                <span class="task-tag">Pick-and-place</span>
+              </div>
+            </div>
+            <p class="task-desc">
+              A standard pick-and-place task: putting an object into a box.
+            </p>
+            <div class="condition-grid">
+              <figure class="condition-card">
+                <div class="condition-media">
+                  <video autoplay controls loop muted playsinline>
+                    <source src="./static/videos/pack_box_indomain.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <figcaption class="condition-label is-indomain">In-domain</figcaption>
+              </figure>
+              <figure class="condition-card">
+                <div class="condition-media">
+                  <video autoplay controls loop muted playsinline>
+                    <source src="./static/videos/pack_box_tablecloth.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <figcaption class="condition-label is-ood">Unseen Tablecloth</figcaption>
+              </figure>
+              <figure class="condition-card">
+                <div class="condition-media">
+                  <video autoplay controls loop muted playsinline>
+                    <source src="./static/videos/pack_box_lighting.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <figcaption class="condition-label is-ood">Unseen Lighting</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="task-block">
+            <div class="task-header">
+              <span class="task-index">03</span>
+              <div class="task-heading">
+                <h4 class="task-name">Printer Refilling</h4>
+                <span class="task-tag">Deformable object</span>
+              </div>
+            </div>
+            <p class="task-desc">
+              Requires interacting with deformable paper. The robot must separate an appropriate amount from a
+              stack and load it into the printer paper tray.
+            </p>
+            <div class="condition-grid">
+              <figure class="condition-card">
+                <div class="condition-media">
+                  <video autoplay controls loop muted playsinline>
+                    <source src="./static/videos/printer_refilling_indomain.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <figcaption class="condition-label is-indomain">In-domain</figcaption>
+              </figure>
+              <figure class="condition-card">
+                <div class="condition-media">
+                  <video autoplay controls loop muted playsinline>
+                    <source src="./static/videos/printer_refilling_tablecloth.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <figcaption class="condition-label is-ood">Unseen Tablecloth</figcaption>
+              </figure>
+              <figure class="condition-card">
+                <div class="condition-media">
+                  <video autoplay controls loop muted playsinline>
+                    <source src="./static/videos/printer_refilling_lighting.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <figcaption class="condition-label is-ood">Unseen Lighting</figcaption>
+              </figure>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </section>
